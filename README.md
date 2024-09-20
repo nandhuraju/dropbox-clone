@@ -38,6 +38,12 @@ A decentralized Dropbox-like application (DApp) built on Ethereum that allows us
     
     npm install
     Create a .env file:
+2. **Install dependencies:**:
+ 
+  ```bash
+    
+    npm install
+    Create a .env file:
 
 3. **Install dependencies:**:
  
@@ -63,10 +69,16 @@ Run the frontend:
 npm run dev
 
 ## 📦 Usage
+
 Connect MetaMask, upload files to IPFS, view/download them, or delete.
+
 ## 🛡️ Security
+
 Keep private keys and sensitive info in .env (never expose them).
+
 ## 👨‍💻 Author
-Your Name - GitHub
+
+Nandhu Raju - GitHub
+
 ## 📝 License
 This project is licensed under the MIT License.
