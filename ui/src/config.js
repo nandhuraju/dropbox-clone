@@ -166,6 +166,5 @@ export const contractABI = [
   }
 ];
 
-export const thirdwebClientId = "d50b56e4886b1c644837380fd953821a"; // Replace with your Thirdweb client ID
-export const thirdwebClientSecret =
-  "A5qcyxfswPNkJF1qsPOBmxYeyUNcjj5TPQN94JrMwAdr3leVtDk79EGtC-rxYyhXOKWag8cbi5q4L4Mgmi0TbA"; // Replace with your Thirdweb client secret
+export const thirdwebClientId = import.meta.env.VITE_TW_CLIENT_ID;; // Replace with your Thirdweb client ID
+export const thirdwebClientSecret = import.meta.env.VITE_TW_CLIENT_SECRET; // Replace with your Thirdweb client secret
