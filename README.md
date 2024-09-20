@@ -33,18 +33,21 @@ A decentralized Dropbox-like application (DApp) built on Ethereum that allows us
    cd dropbox-clone-dapp
 
 2. **Install dependencies:**:
+ 
   ```bash
     
     npm install
     Create a .env file:
 
 2. **Install dependencies:**:
+ 
   ```bash
 
 INFURA_SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
 ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
 THIRDWEB_CLIENT_ID=your-client-id
 THIRDWEB_CLIENT_SECRET=your-client-secret
+
 Compile & deploy the contract:
 
 2. **Install dependencies:**:
