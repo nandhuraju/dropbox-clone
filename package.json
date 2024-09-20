@@ -1,5 +1,5 @@
 {
-  "name": "discord-clone",
+  "name": "dropbox-clone-dapp",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,5 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.10"
-  },
-  "dependencies": {
-    "ethers": "^6.13.2",
-    "ipfs-http-client": "^60.0.1"
   }
 }
