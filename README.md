@@ -38,6 +38,14 @@ A decentralized Dropbox-like application (DApp) built on Ethereum that allows us
     
     npm install
     Create a .env file:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/nandhuraju/dropbox-clone.git
+   cd dropbox-clone-dapp
+
+    
 2. **Install dependencies:**:
  
   ```bash
