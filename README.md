@@ -24,18 +24,43 @@ A decentralized Dropbox-like application (DApp) built on Ethereum that allows us
 - **Infura Account**: Set up an account at [Infura](https://infura.io/) to connect to Ethereum networks.
 - **Thirdweb Account**: Register for a [Thirdweb](https://thirdweb.com/) account to manage IPFS storage.
 
-## 📂 Project Structure
+## ⚙️ Setup
 
-```bash
-.
-├── public                  # Public assets
-├── src                     # Source files
-│   ├── components          # React components (FileUpload, FileList)
-│   ├── App.jsx             # Main app component
-│   ├── config.js           # Configuration file for contract and thirdweb credentials
-│   ├── contract            # Smart contract logic
-├── .env                    # Environment variables for sensitive data
-├── hardhat.config.js        # Hardhat configuration for deployment
-├── README.md               # Project documentation
-├── package.json            # Node.js dependencies
-└── tailwind.config.js      # Tailwind CSS configuration
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/nandhuraju/dropbox-clone.git
+   cd dropbox-clone-dapp
+
+2. **Install dependencies:**:
+  ```bash
+    
+    npm install
+    Create a .env file:
+
+  ```bash
+
+INFURA_SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
+ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
+THIRDWEB_CLIENT_ID=your-client-id
+THIRDWEB_CLIENT_SECRET=your-client-secret
+Compile & deploy the contract:
+
+  ```bash
+
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network infurasep
+Run the frontend:
+
+  ```bash
+
+npm run dev
+
+## 📦 Usage
+Connect MetaMask, upload files to IPFS, view/download them, or delete.
+## 🛡️ Security
+Keep private keys and sensitive info in .env (never expose them).
+## 👨‍💻 Author
+Your Name - GitHub
+## 📝 License
+This project is licensed under the MIT License.
