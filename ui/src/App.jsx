@@ -86,8 +86,13 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
-        Dropbox Clone DApp
+      <h1 className="text-4xl font-bold text-center text-blue-600 mb-8 flex justify-center items-center space-x-3">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Dropbox_Icon.svg/1024px-Dropbox_Icon.svg.png?20151210150256"
+          alt="Dropbox Logo"
+          className="w-10 h-10"
+        />
+        <span>Dropbox Clone DApp</span>
       </h1>
       <div className="text-center">
         {!account ? (

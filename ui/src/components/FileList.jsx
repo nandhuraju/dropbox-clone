@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const FileList = ({ files, onDelete }) => {
+  const [previewUrl, setPreviewUrl] = useState(null);
+  const [previewType, setPreviewType] = useState(null); // Track the file type
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const getFileUrl = (cid) => `https://ipfs.io/ipfs/${cid}`;
 
   const handleDownload = async (ipfsHash) => {
     try {
-      const url = `https://ipfs.io/ipfs/${ipfsHash.replace("ipfs://", "")}`;
+      const url = getFileUrl(ipfsHash.replace("ipfs://", ""));
       const response = await fetch(url);
       if (!response.ok)
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -18,6 +22,65 @@ const FileList = ({ files, onDelete }) => {
       link.remove();
     } catch (error) {
       console.error("Error downloading file:", error);
+    }
+  };
+
+  const handleView = (file) => {
+    const url = getFileUrl(file.ipfsHash.replace("ipfs://", ""));
+    setPreviewUrl(url);
+    setPreviewType(file.fileType); // Set the file type for preview
+    setIsModalOpen(true);
+  };
+
+  const closePreview = () => {
+    setIsModalOpen(false);
+    setPreviewUrl(null);
+    setPreviewType(null);
+  };
+
+  const renderPreview = () => {
+    if (!previewUrl) return null;
+
+    // Render different previews based on the file type
+    if (previewType.startsWith("image/")) {
+      return <img src={previewUrl} alt="Preview" className="max-w-full" />;
+    } else if (previewType.startsWith("video/")) {
+      return (
+        <video controls className="max-w-full">
+          <source src={previewUrl} type={previewType} />
+          Your browser does not support the video tag.
+        </video>
+      );
+    } else if (previewType.startsWith("audio/")) {
+      return (
+        <audio controls className="w-full">
+          <source src={previewUrl} type={previewType} />
+          Your browser does not support the audio element.
+        </audio>
+      );
+    } else if (previewType === "application/pdf") {
+      return (
+        <embed
+          src={previewUrl}
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        />
+      );
+    } else if (previewType === "text/plain") {
+      return (
+        <iframe
+          src={previewUrl}
+          title="Text Preview"
+          className="w-full h-96"
+        ></iframe>
+      );
+    } else {
+      return (
+        <p className="text-red-500">
+          Preview not available for this file type.
+        </p>
+      );
     }
   };
 
@@ -36,6 +99,12 @@ const FileList = ({ files, onDelete }) => {
             </div>
             <div className="space-x-4">
               <button
+                onClick={() => handleView(file)}
+                className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
+              >
+                View
+              </button>
+              <button
                 onClick={() => handleDownload(file.ipfsHash)}
                 className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition"
               >
@@ -51,6 +120,22 @@ const FileList = ({ files, onDelete }) => {
           </li>
         ))}
       </ul>
+
+      {/* Preview Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-4 rounded-lg max-w-lg w-full">
+            <h3 className="text-xl mb-4">File Preview</h3>
+            {renderPreview()}
+            <button
+              onClick={closePreview}
+              className="mt-4 bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,21 +1,36 @@
 # 📦 Dropbox Clone DApp
 
-A decentralized Dropbox-like application (DApp) built on Ethereum that allows users to securely upload, view, download, and delete files on IPFS (InterPlanetary File System) via a smart contract. MetaMask is used for authentication and interaction with the Ethereum blockchain, and Thirdweb is integrated for IPFS storage.
+This project is a decentralized application (DApp) that replicates core Dropbox functionality on the Ethereum blockchain. Users can upload, preview, view, and delete files with the help of smart contracts, decentralized storage (IPFS), and blockchain-based file management.
 
 ## 🚀 Features
 
-- **Connect to MetaMask**: Users can securely log in using their MetaMask wallet.
-- **Upload Files**: Upload files to IPFS, and store their metadata on the blockchain.
-- **View and Download Files**: View a list of uploaded files and download them from IPFS.
-- **Delete Files**: Remove files from the DApp, with the changes reflected on the blockchain.
-  
+- **MetaMask Wallet Integration**: Users can connect to the Ethereum blockchain via MetaMask.
+- **File Upload**: Upload files directly to IPFS and store the file information (name, type, hash) on the Ethereum blockchain.
+- **File Listing**: View files associated with your account from the blockchain.
+- **File Preview**: Preview files (images, videos, PDFs) directly in the browser.
+- **File Deletion**: Remove files from your account through a smart contract transaction.
+- **IPFS for Decentralized Storage**: Files are stored securely on IPFS via the Thirdweb SDK.
+
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, Tailwind CSS
-- **Smart Contract**: Solidity, Hardhat
-- **Blockchain Interaction**: Ethers.js, MetaMask
-- **IPFS Storage**: Thirdweb
-- **Ethereum Test Network**: Sepolia via Infura
+### Frontend
+- **React**: UI components and frontend interactions
+- **Vite**: Fast development build and bundler
+- **Tailwind CSS**: CSS framework for rapid styling
+- **Ethers.js**: Ethereum library for interacting with the blockchain
+- **MetaMask**: Wallet for connecting to the Ethereum network
+
+### Backend
+- **Solidity**: Smart contract development
+- **Ethereum**: Blockchain network for contract deployment
+- **Hardhat**: Ethereum development environment and testing framework
+- **Thirdweb SDK**: For IPFS integration and file storage
+
+### Smart Contract
+
+- **Upload File**: Stores file metadata (name, type, IPFS hash) on the blockchain.
+- **Get Files**: Retrieves file information stored for a specific user.
+- **Delete File**: Removes file metadata from the blockchain and user account.
 
 ## 📝 Prerequisites
 
@@ -24,69 +39,13 @@ A decentralized Dropbox-like application (DApp) built on Ethereum that allows us
 - **Infura Account**: Set up an account at [Infura](https://infura.io/) to connect to Ethereum networks.
 - **Thirdweb Account**: Register for a [Thirdweb](https://thirdweb.com/) account to manage IPFS storage.
 
-## ⚙️ Setup
+## Installation
 
-1. **Clone the repository**:
-
+1. Clone the repository:
    ```bash
-   git clone https://github.com/nandhuraju/dropbox-clone.git
-   cd dropbox-clone-dapp
+   git clone https://github.com/your-repo/dropbox-clone-dapp.git
 
-2. **Install dependencies:**:
- 
-  ```bash
-    
-    npm install
-    Create a .env file:
-
-1. **Clone the repository**:
-
+##
+1. Clone the repository:
    ```bash
-   git clone https://github.com/nandhuraju/dropbox-clone.git
-   cd dropbox-clone-dapp
-
-    
-2. **Install dependencies:**:
- 
-  ```bash
-    
-    npm install
-    Create a .env file:
-
-3. **Install dependencies:**:
- 
-  ```bash
-
-INFURA_SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
-ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
-THIRDWEB_CLIENT_ID=your-client-id
-THIRDWEB_CLIENT_SECRET=your-client-secret
-
-Compile & deploy the contract:
-
-4. **Install dependencies:**:
-  ```bash
-
-npx hardhat compile
-npx hardhat run scripts/deploy.js --network infurasep
-Run the frontend:
-
-2. **Install dependencies:**:
-  ```bash
-
-npm run dev
-
-## 📦 Usage
-
-Connect MetaMask, upload files to IPFS, view/download them, or delete.
-
-## 🛡️ Security
-
-Keep private keys and sensitive info in .env (never expose them).
-
-## 👨‍💻 Author
-
-Nandhu Raju - GitHub
-
-## 📝 License
-This project is licensed under the MIT License.
+   git clone https://github.com/your-repo/dropbox-clone-dapp.git
