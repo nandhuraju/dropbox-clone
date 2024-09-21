@@ -51,19 +51,26 @@ This project is a decentralized application (DApp) that replicates core Dropbox 
    npm install
 
 ##
-3. Create a .env file:
+3. Create a .env file in root folder:
    ```bash
    INFURA_SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
    ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
+
+##
+4. Create a .env file in ui folder:
+   ```bash
    THIRDWEB_CLIENT_ID=your-client-id
    THIRDWEB_CLIENT_SECRET=your-client-secret
 
-
 ##
-4. Run the frontend:
+5. Run the frontend:
    ```bash
    cd ui
    npm run dev
+
+## Demo Video
+
+[![Demo](https://icons.iconarchive.com/icons/iconsmind/outline/256/Youtube-icon.png)](https://youtu.be/sJHGTyBMiNo)
 
 ## 📦 Usage
 
@@ -73,7 +80,27 @@ Connect MetaMask, upload files to IPFS, view/download them, or delete.
 
 Keep private keys and sensitive info in .env (never expose them).
 
+## 🔮 Planned Updates
+
+Multiple File Upload: Allow users to upload multiple files at once instead of one at a time.
+File Sharing: Implement functionality for users to share files with other wallet addresses.
+Search and Filter Files: Add a search bar and filters for file types and names to easily navigate large file collections.
+User Profile and Settings: Allow users to view and edit their profile, with additional options for configuring their DApp experience.
+
+## 🎗️ Contributing
+
+Contributions are welcome! Feel free to fork the project and submit a pull request. Make sure to follow the steps below:
+
+1. Fork the Project.
+2. Create a Feature Branch (git checkout -b feature/<feature_name>).
+3. Commit your changes (git commit -m 'Add <feature_name>').
+4. Push to the branch (git push origin feature/<feature_name>).
+5. Open a Pull Request.
+
 ## 📝 License
-   
-This project is licensed under the MIT License.
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/nandhuraju/ChainCerts/blob/main/License.txt) file for more details.
+
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+
 
