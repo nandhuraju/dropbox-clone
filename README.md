@@ -46,6 +46,33 @@ This project is a decentralized application (DApp) that replicates core Dropbox 
    git clone https://github.com/your-repo/dropbox-clone-dapp.git
 
 ##
-1. Clone the repository:
+2. Install dependencies:
    ```bash
-   git clone https://github.com/your-repo/dropbox-clone-dapp.git
+   npm install
+
+##
+3. Create a .env file:
+   ```bash
+INFURA_SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
+ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
+THIRDWEB_CLIENT_ID=your-client-id
+THIRDWEB_CLIENT_SECRET=your-client-secret
+
+##
+4. Run the frontend:
+   ```bash
+   cd ui
+   npm run dev
+
+## 📦 Usage
+
+Connect MetaMask, upload files to IPFS, view/download them, or delete.
+
+## 🛡️ Security
+
+Keep private keys and sensitive info in .env (never expose them).
+
+## 📝 License
+   
+This project is licensed under the MIT License.
+
