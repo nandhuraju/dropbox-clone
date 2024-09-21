@@ -82,10 +82,10 @@ Keep private keys and sensitive info in .env (never expose them).
 
 ## 🔮 Planned Updates
 
-Multiple File Upload: Allow users to upload multiple files at once instead of one at a time.
-File Sharing: Implement functionality for users to share files with other wallet addresses.
-Search and Filter Files: Add a search bar and filters for file types and names to easily navigate large file collections.
-User Profile and Settings: Allow users to view and edit their profile, with additional options for configuring their DApp experience.
+- **Multiple File Upload:** Allow users to upload multiple files at once instead of one at a time.
+- **File Sharing:** Implement functionality for users to share files with other wallet addresses.
+- **Search and Filter Files:** Add a search bar and filters for file types and names to easily navigate large file collections.
+- **User Profile and Settings:** Allow users to view and edit their profile, with additional options for configuring their DApp experience.
 
 ## 🎗️ Contributing
 
