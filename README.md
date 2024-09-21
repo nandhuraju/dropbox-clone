@@ -53,10 +53,11 @@ This project is a decentralized application (DApp) that replicates core Dropbox 
 ##
 3. Create a .env file:
    ```bash
-INFURA_SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
-ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
-THIRDWEB_CLIENT_ID=your-client-id
-THIRDWEB_CLIENT_SECRET=your-client-secret
+   INFURA_SEPOLIA_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
+   ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
+   THIRDWEB_CLIENT_ID=your-client-id
+   THIRDWEB_CLIENT_SECRET=your-client-secret
+
 
 ##
 4. Run the frontend:
