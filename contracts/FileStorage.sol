@@ -53,16 +53,14 @@ contract DStorage {
         return files[_user];
     }
 
-    // Remove a specific file by index
+      // Remove a specific file by index using the swap-and-pop method
     function removeFile(uint256 _index) public {
         require(_index < files[msg.sender].length, "Invalid index.");
+
+        // Swap the file to be deleted with the last file in the array
+        files[msg.sender][_index] = files[msg.sender][files[msg.sender].length - 1];
         
-        // Remove the file by shifting the array left
-        for (uint256 i = _index; i < files[msg.sender].length - 1; i++) {
-            files[msg.sender][i] = files[msg.sender][i + 1];
-        }
-        
-        // Delete the last file
+        // Remove the last file
         files[msg.sender].pop();
     }
 }
